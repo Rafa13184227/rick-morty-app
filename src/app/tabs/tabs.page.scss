@@ -1,1 +1,8 @@
+ion-tab-bar {
+    --background: var(--color-s);
+}
 
+ion-tab-button {
+    --color: rgba(136, 226, 59, 0.4);
+    --color-selected: var(--color-p);
+}
