@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="background-custom">RICK AND MORTY API - RAFAEL HOYOS ARANGO</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar personaje" (ionInput)="search($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-custom">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let c of filteredCharacters" [routerLink]="['/character-detail', c.id]">
+        <ion-card>
+          <img [src]="c.image" />
+          <ion-card-header>
+            <ion-card-title>{{ c.name }}</ion-card-title>
+            <p
+              class="status" [class.alive]="c.status === 'Alive'"
+              [class.dead]="c.status === 'Dead'"
+              [class.unknown]="c.status === 'unknown'">
+              {{ c.status }}
+            </p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

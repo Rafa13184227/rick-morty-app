@@ -1,0 +1,42 @@
+ion-searchbar {
+    --background: var(--color-s);
+    --color: var(--color-p);
+    --placeholder-color: rgba(136, 226, 59, 0.5);
+    --icon-color: var(--color-p);
+}
+
+ion-card {
+    background: var(--color-s);
+    border-radius: 12px;
+
+    ion-card-title {
+        color: var(--color-p);
+        font-size: small;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .status.alive {
+        font-size: smaller;
+        margin: 10px 0 10px 0;
+        color: #88e23b;
+
+    }
+
+    .status.dead {
+        font-size: smaller;
+        margin: 10px 0 10px 0;
+        color: #FB6467;
+    }
+    .status.unknown{
+        font-size: smaller;
+        margin: 10px 0 10px 0;
+        color: #a6cccc;
+    }
+}
+
+.background-custom {
+    --background: linear-gradient(90deg, rgba(136, 226, 59, 1) 0%, rgba(4, 60, 110, 1) 100%);
+}

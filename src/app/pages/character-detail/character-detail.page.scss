@@ -1,0 +1,37 @@
+.background-custom {
+    --background: var(--color-s);
+}
+.character-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.custom-title{
+    color: var(--color-p);
+}
+
+ion-item {
+    --background: var(--color-s);
+    --color: var(--color-p);
+    --border-color: var(--color-p);
+
+    h2 {
+        color: var(--color-p);
+    }
+
+    h3 {
+        color: var(--color-p);
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+
+    p {
+        color: var(--color-p);
+    }
+
+    ion-thumbnail img {
+        border-radius: 10px;
+        border: 2px solid var(--color-p);
+    }
+}
